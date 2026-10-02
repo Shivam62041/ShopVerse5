@@ -1,0 +1,140 @@
+/* ─── Admin Orders Page ──────────────────────────────────────────────────── */
+
+.admin-orders {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ao-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ao-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f0f0f5;
+  letter-spacing: -0.03em;
+}
+
+.ao-sub {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.4);
+  margin-top: 0.2rem;
+}
+
+.btn-refresh {
+  padding: 0.75rem 1.25rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 0.6rem;
+  color: #f0f0f5;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-refresh:hover:not(:disabled) {
+  background: rgba(255,255,255,0.1);
+}
+
+.btn-refresh:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.ao-error {
+  background: rgba(239,68,68,0.1);
+  border: 1px solid rgba(239,68,68,0.3);
+  color: #fca5a5;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* ── Table ───────────────────────────────────────────────────────────────── */
+.ao-table-wrap {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 1rem;
+  overflow-x: auto;
+}
+
+.ao-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.ao-table th, .ao-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  vertical-align: middle;
+}
+
+.ao-table th {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.2);
+}
+
+.ao-table tr:last-child td { border-bottom: none; }
+.ao-table tbody tr:hover td { background: rgba(255,255,255,0.02); }
+
+.ao-id code {
+  font-family: monospace;
+  color: #a5b4fc;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.ao-date { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+
+.ao-customer {
+  display: flex;
+  flex-direction: column;
+}
+
+.ao-c-name { font-weight: 600; color: #f0f0f5; }
+.ao-c-email { font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-top: 0.1rem; }
+
+.ao-total { font-weight: 700; color: #f0f0f5; }
+
+.ao-status-badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+
+.ao-status-select {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #f0f0f5;
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.ao-status-select:focus { border-color: rgba(99,102,241,0.5); }
+.ao-status-select option { background: #1e1e2d; }
+.ao-status-select:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.text-right { text-align: right !important; }
+
+.ao-loading, .ao-empty { text-align: center !important; padding: 3rem !important; color: rgba(255,255,255,0.4); }

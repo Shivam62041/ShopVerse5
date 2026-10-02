@@ -1,0 +1,19 @@
+{
+  "projects": {
+    "default": "e-commerce-frontend1",
+    "firebase target:apply hosting shopverse shopverse-ai": "e-commerce-frontend1"
+  },
+  "targets": {
+    "e-commerce-frontend1": {
+      "hosting": {
+        "default": [
+          "shopverse-ai"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "hosting": {
+    "default": "shopverse"
+  }
+}
